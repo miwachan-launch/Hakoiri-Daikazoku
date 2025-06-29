@@ -158,6 +158,17 @@
     });
 
     render();
+
+   function simulateKey(key) {
+    const event = new KeyboardEvent('keydown', { key: key });
+    document.dispatchEvent(event);
+   }
   </script>
 
+<div id="touch-controls" style="text-align:center; margin-top:10px;">
+  <button onclick="simulateKey('ArrowUp')">↑</button><br>
+  <button onclick="simulateKey('ArrowLeft')">←</button>
+  <button onclick="simulateKey('ArrowDown')">↓</button>
+  <button onclick="simulateKey('ArrowRight')">→</button>
+</div>
 </body></html>
